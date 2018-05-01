@@ -4,10 +4,10 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>io.predictech.ejb</groupId>
-    <artifactId>ejb3inaction-ejb</artifactId>
+    <groupId>io.predictech.osb</groupId>
+    <artifactId>JavaCallOut</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <packaging>ejb</packaging>
+    <packaging>jar</packaging>
 
     <developers>
         <developer>
@@ -29,24 +29,15 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     </properties>
 
-    <dependencies>
-        <dependency>
-            <groupId>org.jboss.spec.javax.ejb</groupId>
-            <artifactId>jboss-ejb-api_3.1_spec</artifactId>
-            <version>1.0.2.Final</version>
-            <scope>provided</scope>
-        </dependency>
-    </dependencies>
-
     <build>
+        <finalName>javacalloutep</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-ejb-plugin</artifactId>
-                <version>3.0.0</version>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.20</version>
                 <configuration>
-                    <ejbVersion>3.1</ejbVersion>
-                    <generateClient>true</generateClient>
+                    <skip>true</skip>
                 </configuration>
             </plugin>
         </plugins>
